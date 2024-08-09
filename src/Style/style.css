@@ -1,0 +1,141 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .logo {
+    height: 50px; 
+    margin-right: auto;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #007bff;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    padding: 10px 15px;
+    text-align: left;
+  }
+  
+  .main-content {
+    /* background-image: url("../images/pic5.jpg"); */
+    background-repeat: no-repeat;
+    background-size:inherit;
+    /* background-size:810px 810px 810px;  */
+    /* height: calc(100px - 40px - 40px); */
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .footer {
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+.animation-container {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.car {
+  width: 100px;
+  height: 100px;
+  background-image:url(C:/Users/vinay/OneDrive/Desktop/Tollz-E-UI/tollze/src/images/download-removebg-preview.png); 
+  background-size:cover;
+  background-position: center;
+  position: absolute;
+  bottom: 120px;
+  left: 650px;
+  transition: transform 2s ease-out; 
+}
+
+.car.animate {
+  transform: translateX(100vw); 
+}
+
+.container-fluid {
+  /* width: 300px;
+  /* max-width: 400px; */
+  /* height: 600px;
+  max-height: 800px; */ 
+}
+
+/* .glass-login-form{
+  background: rgba(255,255,255,0.25);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  justify-content:space-between;
+} */
+
+/* .glass-login-form h2 {
+  text-align: center;
+  color:#f4eeee;
+} */
+
+/* .l1 {
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #8686e3,#3b3494);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+
+} */
+
+/* .l1:hover{
+  background: linear-gradient(45deg,#5d5e5d,#a4a4a7);
+
+} */
