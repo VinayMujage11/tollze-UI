@@ -1,8 +1,14 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
   }
   
   .App {
@@ -15,8 +21,13 @@ body {
   .header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
+    padding: 10px 0;
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 1.8em;
   }
   
   .logo {
@@ -41,42 +52,158 @@ body {
     color: #007bff;
   }
   
-  .dropdown {
-    position: relative;
-  }
   
-  .dropdown-content {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f8f9fa;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    padding: 10px 15px;
-    text-align: left;
-  }
   
   .main-content {
-    /* background-image: url("../images/pic5.jpg"); */
-    background-repeat: no-repeat;
-    background-size:inherit;
-    /* background-size:810px 810px 810px;  */
-    /* height: calc(100px - 40px - 40px); */
+   
     flex: 1;
-    padding: 50px;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
   
   .footer {
-    padding: 10px 20px;
-    background-color: #f8f9fa;
+    padding: 10px 0;
+    background-color: #004080;
+    color: #fff;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  form label{
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  form input,
+  form select,
+  form button{
+    margin-bottom: 15px;
+    padding: 10px;
+    border : 1px solid #ddd;
+    border-radius: 5px;
+
+  }
+
+  form button{
+    background-color: #004080;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  form button:hover{
+    background-color: #003366;
   }
   
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  table th{
+    background-color: #004080;
+    color: #fff;
+  }
+
+  .hidden {
+    display: none;
+}
+
+.container{
+  width:25%;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  color:#fff;
+  
+}
+
+#login{
+  background-image: url(../images/Loginimg.jfif);
+}
+
+#booktoll{
+  background-image: url(../images/booktoll.png);
+}
+
+#TollHistory{
+  background-image: url(../images/tollhistory.jfif);
+}
+
+#futureoutings{
+  background-image: url(../images/futureoutings.jpg);
+}
+
+#Addvehicle{
+  background-image: url(../images/addvehicle.webp);
+}
+
+#logout{
+  background-image: url(../images/user_logout-1024.webp);
+}
+
+#paymentmode{
+  background-image: url(../images/paymentmode.png);
+}
+
+.container button{
+  background-color: #0c7dee;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor:pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+  
+}
+
+.container :link{
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor:pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.container button:hover{
+  background-color: #003366;
+}
+
+.row{
+  justify-content: space-evenly;
+}
+
+
+
 .animation-container {
   position: relative;
   height: 70vh;
@@ -102,40 +229,39 @@ body {
   transform: translateX(100vw); 
 }
 
-.container-fluid {
-  /* width: 300px;
-  /* max-width: 400px; */
-  /* height: 600px;
-  max-height: 800px; */ 
+/* .glassmorphic-card {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: space-evenly;
+}
+.glassmorphic-card {
+  font-family: 'Open Sans', sans-serif; /* Font family */
+  */
+
+#error {
+  color: #ff0000;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center; /* Center the error message */
 }
 
-/* .glass-login-form{
-  background: rgba(255,255,255,0.25);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-  padding: 20px;
-  justify-content:space-between;
-} */
+/* Additional text styles */
+.glassmorphic-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 
-/* .glass-login-form h2 {
-  text-align: center;
-  color:#f4eeee;
-} */
+.glassmorphic-card a {
+  color: #4CAF50;
+  text-decoration: none;
+}
 
-/* .l1 {
-  margin: 10px;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #8686e3,#3b3494);
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-
-} */
-
-/* .l1:hover{
-  background: linear-gradient(45deg,#5d5e5d,#a4a4a7);
-
-} */
+.glassmorphic-card a:hover {
+  color: #3e8e41;
+}

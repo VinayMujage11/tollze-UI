@@ -28,10 +28,20 @@ const PaymentComp = () => {
     event.preventDefault();
     axios.put(`http://localhost:8080/updateToll/${currentUser.tollBookId}`,currentUser).then((res)=>{
           
-            window.alert("Toll Booked Successfully");
+      if(res.data !== "TollBooked"){
+        window.alert("Unable To Book Toll Please Check Payment Mode..");
+
+            nav("/TollBook");
+
+      }
+      else{
+        window.alert("Toll Booked Successfully");
             localStorage.removeItem('token2');
 
             nav("/Dashboard");
+
+      }
+            
         }).catch((error)=>{})
        
   }
@@ -60,9 +70,9 @@ const PaymentComp = () => {
             <strong>{currentUser.source}</strong><br/><br/>
             <lable>Destination:</lable>
             <strong>{currentUser.destination}</strong><br/><br/>
-            <lable>distanceInKm:</lable>
+            <lable>Distance(In KM):</lable>
             <strong>{currentUser.distanceInKM}</strong><br/><br/>
-            <lable>amountTobePaid:</lable>
+            <lable>Amount(INR):</lable>
             <strong>{currentUser.amountToBePaid}</strong><br/><br/>
             {/* <input type='text' name="userId"  value={tollBookData.userId} readOnly/> <br/><br/> */}
            <button type='submit' className='btn btn-primary mt-2'>Submit</button>

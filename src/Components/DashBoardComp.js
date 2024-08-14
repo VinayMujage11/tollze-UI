@@ -18,14 +18,28 @@ const DashBoardComp = () => {
       <div>
 
         
-          <h1>Welcome to Tollz-E</h1>
-          <Link to="/TollBook" className='btn btn-primary btn-sm'><BookOnlineIcon></BookOnlineIcon>Book Toll</Link>{'   '}
-          <Link to="/TollHistory" className='btn btn-primary btn-sm'><HistoryIcon></HistoryIcon>Toll History</Link>{'   '}
-          <Link to="/FutureTrips" className='btn btn-primary btn-sm'><PendingIcon></PendingIcon>Trips to be Completed</Link>{'   '}
-          <Link to="/Vehicles" className='btn btn-primary btn-sm'><DirectionsCarFilledIcon></DirectionsCarFilledIcon>Add Vehicle</Link>{'   '}
+        <div className="row">
+          <div className="container" id='booktoll'>
+          <Link to="/TollBook" className='btn btn-primary btn-sm'><BookOnlineIcon></BookOnlineIcon>Book Toll</Link>
+          </div>
+          <div className="container" id='TollHistory'>
+          <Link to="/TollHistory" className='btn btn-primary btn-sm'><HistoryIcon></HistoryIcon>Toll History</Link>
+          </div>
+          <div className="container" id='futureoutings'>
+          <Link to="/FutureTrips" className='btn btn-primary btn-sm'><PendingIcon></PendingIcon>Future Outings</Link>
+          </div>
+          <div className="container" id='Addvehicle'>
+          <Link to="/Vehicles" className='btn btn-primary btn-sm'><DirectionsCarFilledIcon></DirectionsCarFilledIcon>Add Vehicle</Link>
+          </div>
+          <div className="container" id='paymentmode'>
+          <Link to="/paymentModes" className='btn btn-primary btn-sm'>Add Payment Mode</Link>
+          </div>
+          <div className="container" id='logout'>
           <button onClick={handlesubmit} className='btn btn-primary btn-sm'><AccountCircleIcon></AccountCircleIcon>Logout</button>
+          </div>
+          
 
-        
+        </div>
       </div>
 
 

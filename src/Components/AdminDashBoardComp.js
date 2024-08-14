@@ -25,18 +25,28 @@ const AdminDashBoardComp = () => {
 
         
           <h1>Welcome to Tollz-E</h1>
-          <Link to="/AddEditToll" className='btn btn-primary btn-sm'><IsoTwoToneIcon></IsoTwoToneIcon>Add Or Edit Toll Tax</Link>{'   '}
-          <Link to="/Users" className='btn btn-primary btn-sm'><GroupIcon/>Users</Link>{'   '}
+          <div className="row">
+          <div className="container" id='booktoll'>
+          <Link to="/AddEditToll" className='btn btn-primary btn-sm'><IsoTwoToneIcon></IsoTwoToneIcon>Add Or Edit Toll Tax</Link>
+          </div>
+          <div className="container" id='booktoll'>
+          <Link to="/Users" className='btn btn-primary btn-sm'><GroupIcon/>Users</Link>
+          </div>
           {role === 'Master' && (
+           <div className="container" id='booktoll'> 
           <Link to="/Admins" className='btn btn-primary btn-sm'><AdminPanelSettingsIcon></AdminPanelSettingsIcon>Admins</Link>
-          )}{'   '}
-          <Link to="/AdminsTollHistory" className='btn btn-primary btn-sm'><DirectionsCarFilledIcon></DirectionsCarFilledIcon>Edit Toll History</Link>{'   '}
+          </div>
+          )}
+          <div className="container" id='booktoll'>
+          <Link to="/AdminsTollHistory" className='btn btn-primary btn-sm'><DirectionsCarFilledIcon></DirectionsCarFilledIcon>Edit Toll History</Link>
+          </div>
+          <div className="container" id='booktoll'>
           <button onClick={handlesubmit} className='btn btn-primary btn-sm'><AccountCircleIcon></AccountCircleIcon>Logout</button>
+          </div>
+          </div>
 
         
       </div>
-
-
     )
 }
 

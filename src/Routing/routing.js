@@ -21,6 +21,7 @@ import AddEditAdminsComp from "../Components/AddEditAdminsComp";
 import EditAdminsComp from "../Components/EditAdminsComp";
 import AdminTollHistoryComp from "../Components/AdminTollHistoryComp";
 import EditTollHistory from "../Components/EditTollHistory";
+import PaymentAccountComp from "../Components/PaymentAccountComp";
 
 const router = createBrowserRouter([
     {path:"",element:<HomePageComp/>,children:[
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
         {path:"TollHistory",element:<TollHistoryComp/>},
         {path:"FutureTrips",element:<TripsToBeCompletedComp/>},
         {path:"Vehicles",element:<VehiclesComp/>},
+        {path:"paymentModes",element:<PaymentAccountComp/>},
         {path:"AdminLogin",element:<AdminLoginComp/>},
         {path:"AdminDashBoard",element:(<AdminSessionRouteComp><AdminDashBoardComp/></AdminSessionRouteComp>)},
         {path:"AddEditToll",element:<AddEditTollTaxComp/>},
@@ -42,7 +44,9 @@ const router = createBrowserRouter([
         {path:"Admins" ,element:<AddEditAdminsComp/>},
         {path:"EditAdmin/:adminId" ,element:<EditAdminsComp/>},
         {path:"AdminsTollHistory",element:<AdminTollHistoryComp/>},
-        {path:"EditTollHistory/:tollBookId",element:<EditTollHistory/>}
+        {path:"EditTollHistory/:tollBookId",element:<EditTollHistory/>},
+        
+
     ]},
     {path:"RegisterPage",element:<AddUserComp/>},
     {path:"LoginPage",element:<LoginComp/>}

@@ -59,7 +59,7 @@ const LoginComp = () => {
         <div>
           <label>Password:</label>
           <input
-            type="text"
+            type="password"
             name="password"
             onChange={inputChangeHandler}
             value={loginData.password}
